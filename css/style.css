@@ -1,0 +1,108 @@
+html, body {
+    margin: 0;
+    height: 100%;
+    overflow: hidden;
+}
+/*Cor do fundo e fixação de margem*/
+body{
+    margin: 0;
+    background-color: black;
+}
+/*Formatação de estrelas*/
+.star{
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    background-color: white;
+}
+
+.intro{
+    color: rgb(75, 213, 238);
+    font-size: 200%;
+    font-weight: 600;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    /*Criação da primeira animação ( nome da tag, tempo que ela ficará na tela, tipo de animação, tempo dela) */
+    animation: intro 6s ease-out 1s;
+    white-space: nowrap;
+    opacity: 0;
+}
+
+@keyframes intro{
+    0%{
+    opacity: 0;
+    }
+    20%{
+    opacity: 1;
+    }
+    90%{
+    opacity: 1;
+    }
+    100%{
+    opacity: 0;
+    }
+}
+
+.logo{
+    position: absolute;
+    top:25%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    margin: 0;
+    animation: logo 9s ease-out 9s;
+    opacity: 0;
+}
+
+.logo.svg{
+    /*essa função é para mudar tamanhos ( erdar: svg erda o tamnho da logo)*/
+    width: inherit;
+}
+
+@keyframes logo{
+    0%{
+    opacity: 1;
+    transform: scale(2.75);
+    width: 300px;
+    }
+    100%{
+    opacity: 0;
+    transform: scale(0.1);
+    width: 300px;
+    }
+}
+
+@media (max-width: 400px) {
+    .intro{
+        font-size: 120%;
+    }
+
+    .logo{
+        top: 10%;
+        left: 15%;
+    }
+
+    @keyframes logo{
+    0%{
+    width: 50px;
+    }
+    100%{
+        width: 50px;
+    }
+}
+}
+
+@media (max-width: 400.01px) and (max-width: 600px) {
+    .intro{
+        font-size: 120%;
+    }
+}
+
+@media (max-width: 600.01px){
+    .intro{
+        font-size: 180%;
+    }
+}
