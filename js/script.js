@@ -10,7 +10,7 @@ $(window).on('resize', function(){
 
 /*Função criar estrelas */
 function criarEstrelas(){
-    const numstars = 100;
+    const numstars = 180;
     for(let cont = 0; cont < numstars; cont++) {
 
         let star = document.createElement("div");
@@ -31,3 +31,21 @@ function pegarPosicoesRamdom() {
     var randomX = Math.floor(Math.random() * x);
     return [randomX, randomY];
 }
+
+document.addEventListener('DOMContentLoaded', () => {
+  const overlay = document.getElementById('start-overlay');
+  const audio = document.getElementById('audio');
+
+  const initExperience = () => {
+    if (overlay) overlay.style.display = 'none';
+    audio.volume = 0;
+    audio.play().then(() => {
+      // Ajusta volume após 7.9s (ou quando a música começar)
+      setTimeout(() => { audio.volume = 1; }, 7900);
+    }).catch(e => console.log("Falha ao tocar áudio"));
+  };
+
+  // Ativa com clique ou qualquer tecla
+  document.addEventListener('click', initExperience, { once: true });
+  document.addEventListener('keydown', initExperience, { once: true });
+});
