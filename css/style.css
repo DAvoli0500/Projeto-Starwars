@@ -15,7 +15,6 @@ body{
     height: 1px;
     background-color: white;
 }
-
 .intro{
     color: rgb(75, 213, 238);
     font-size: 200%;
@@ -123,9 +122,32 @@ p {
     }
 }
 
+@media (max-width: 300px) {
+    #board,.intro{
+        font-size: 80%;
+    }
+
+    .logo{
+        top: 50%;
+        left: 50%;
+    }
+
+    @keyframes logo{
+    0%{
+        transform: translate(-50%, -50%) scale(2.75);
+        width: 40px;
+        opacity: 1;
+    }
+    100%{
+        transform: translate(-50%, -50%) scale(0.1);
+        width: 40px;
+        opacity: 0;
+    }}
+}
+
 @media (max-width: 400px) {
     #board,.intro{
-        font-size: 120%;
+        font-size: 100%;
     }
 
     .logo{
@@ -143,8 +165,7 @@ p {
         transform: translate(-50%, -50%) scale(0.1);
         width: 50px;
         opacity: 0;
-    }
-}
+    }}
 }
 
 @media (max-width: 400.01px) and (max-width: 600px) {
@@ -194,4 +215,3 @@ p {
         }
     }
 }
-
