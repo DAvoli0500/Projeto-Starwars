@@ -120,7 +120,7 @@ p {
 /* ===== RESPONSIVIDADE DO #board ===== */
 
 /* Celulares (até 480px) */
-@media (max-width: 480px) {
+@media (min-width: 100px) and (max-width: 480px) {
   #board {
     width: 14em;
     height: 40em;
