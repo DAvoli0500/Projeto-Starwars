@@ -117,21 +117,33 @@ p {
   100% { top: -170%; }
 }
 
-/* ===== RESPONSIVIDADE DO #board ===== */
+/* ===== RESPONSIVIDADE ===== */
 
-/* Celulares (até 480px) */
+/* Celulares (de 100px até 480px) */
 @media (min-width: 100px) and (max-width: 480px) {
   #board {
-    width: 14em;
-    height: 40em;
+    width: 90%;
     transform: translateX(-50%) perspective(250px) rotateX(20deg);
     font-size: 0.9em;
   }
 
+  .intro{
+    width: 100%;
+    text-align: center;
+    font-size: 1.15em;
+  }
+
   #conteudo {
-    padding: 0.5rem;
-    font-size: 0.9em;
-    animation-duration: 120s;
+    width: 100%;
+    font-size: 200%;
+    animation-duration: 110s;
+  }
+
+  .logo{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    max-width: 40%;
   }
 
   p {

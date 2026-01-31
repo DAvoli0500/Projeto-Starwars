@@ -40,8 +40,8 @@ document.addEventListener('DOMContentLoaded', () => {
     if (overlay) overlay.style.display = 'none';
     audio.volume = 0;
     audio.play().then(() => {
-      // Ajusta volume após 7.9s quando a música começar
-      setTimeout(() => { audio.volume = 1; }, 7900);
+      // Ajusta volume após 8.5s quando a música começar
+      setTimeout(() => { audio.volume = 1; }, 8500);
     }).catch(e => console.log("Falha ao tocar áudio"));
   };
 
